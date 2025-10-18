@@ -33,7 +33,15 @@ const menuMobile = document.getElementById("menu-mobile");
 
 function renderizar(cards, lista,filtro = " todos" ) {
     cards.forEach((card, index) => {
-        
+        const item = lista[index];
+        const generos =item && item.genero;
+        const correspondeFiltro = filtro === "todos" || (generos.includes(filtro))
+
+        if (item && correspondeFiltro) {
+            cards.style.display = "block";
+        } else {
+
+        }
 
     })
 }
